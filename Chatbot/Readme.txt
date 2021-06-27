@@ -1,0 +1,2 @@
+Install latest version of Anaconda 
+Then Form Anaconda Navigator create Python New Environment with python 3.7 ->  Intsall latest version of Tensorflow Keras Nltk Flask ....Then install pickle from Anaconda prompt.

@@ -1,7 +1,7 @@
 {"intents": [
     {"tag": "greeting",
-     "patterns": ["Hi there", "How are you", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Good Morning"],
-     "responses": ["Hello, thanks for asking. How are you?", "Good to see you again. How was your day?", "Hi there, are you ok?", "Hi Friend, how was your day?", "Hello, how are you doing?"],
+     "patterns": ["Hi there", "Is anyone there?","Hey","Hola", "Hello", "Good day", "Good Morning"],
+     "responses": ["Hello, How are you?", "Good to see you again. How was your day?", "Hi there, are you ok?", "Hi Friend, how was your day?", "Hello, how are you doing?"],
      "context": [""]
     },
     {"tag": "goodbye",
@@ -30,8 +30,8 @@
         "context": [""]
     },
     {"tag": "howAreYou",
-     "patterns": ["How was your day?", "How are you doing?", "Are you ok?", "Are you happy?", "Is everything ok?", "your day" ],
-     "responses": ["Yeah i'm doing great.", "Yeah i had a great day."],
+     "patterns": ["How was your day?", "How are you doing?", "Are you ok?", "Are you happy?", "Is everything ok?", "your day", "i am fine how are you", "i am good how are you", "How are you" ],
+     "responses": ["Yeah i'm doing great.", "Yeah i had a great day.", "I am doing great thenks for asking"],
      "context": [""]
     },
     {"tag": "sad",
@@ -41,7 +41,7 @@
     },
     {"tag": "depressed",
      "patterns": ["I am depressed", "I think i am depressed", "i suffering from defression", "i am going through hard times", "i am going through defression" ],
-     "responses": ["You’re not alone in this. I may not understand exactly how you feel, but I care about you and want to help", "I’m here for you. Whenever you want to talk, I’ll listen — I’m just a call or a text away", "Depression is a real health issue that can be treated. What steps can you take to talk to a doctor or counselor about how you’re feeling?", "Its ok to feel depressed. Talk to your friends, its always helps", "You’re not alone. I may not understand exactly how you feel, but you’re not alone."],
+     "responses": ["You are not alone in this. I may not understand exactly how you feel, but I care about you and want to help", "I am here for you. Whenever you want to talk, I will listen, I am just a text away", "Depression is a real health issue that can be treated. What steps can you take to talk to a doctor or counselor about how you are feeling?", "Its ok to feel depressed. Talk to your friends, its always helps", "You are not alone. I may not understand exactly how you feel, but you are not alone."],
      "context": [""]
     },
     {"tag": "suicide",
@@ -78,6 +78,11 @@
      "patterns": ["What should i do to be happy?", "What should i do?", "Any advise?", "Do you have any advise?"],
      "responses": ["Try to share your feelings with others.", "Talk about yours feelings with someone you trust", "Getting professional help always good sign", "Try to do some physical exercise. Go out side more. Make some friend", "Take vacation and refresh your mind"],
      "context": [""]
+    },
+    {"tag": "nothing",
+        "patterns": ["nothing", "i am just fine", "hmm"],
+        "responses": ["You sure about that", "Dont be shy. If something heppend to you just tell me", "Okay"],
+        "context": [""]
     }
 ]
 }
