@@ -50,6 +50,12 @@ word_index = token.word_index
 sequences = token.texts_to_sequences(get_Question)
 padded_sequences = pad_sequences(sequences, truncating='post', maxlen=max_len)
 
+with open('token.pickle', 'wb') as handle:
+    pickle.dump(token, handle, protocol=pickle.HIGHEST_PROTOCOL)
+
+with open('label.pickle', 'wb') as ecn_file:
+    pickle.dump(lbl_encoder, ecn_file, protocol=pickle.HIGHEST_PROTOCOL)
+
 #Model
 model = Sequential()
 model.add(Embedding(vocab_size, embedding_dim, input_length=max_len))
@@ -67,14 +73,3 @@ epochs = 500
 history = model.fit(padded_sequences, np.array(labels), epochs=epochs)
 
 model.save("model.h5")
-
-with open('token.pickle', 'wb') as handle:
-    pickle.dump(token, handle, protocol=pickle.HIGHEST_PROTOCOL)
-
-with open('label.pickle', 'wb') as ecn_file:
-    pickle.dump(lbl_encoder, ecn_file, protocol=pickle.HIGHEST_PROTOCOL)
-
-
-
-
-
