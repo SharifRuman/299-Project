@@ -15,20 +15,20 @@ import pickle
 
 path = "data\\ai.txt"
 
-list_sent=[]
+list_sentence=[]
 with open(path, encoding="utf8") as f:
     train_lines = f.readlines()
     for line in train_lines:
         line = line.split('__eou__')
         for i in range(len(line)):
             line[i] = line[i].strip()
-        list_sent.append(line)
+        list_sentence.append(line)
 
 get_Question = []
-for i in list_sent: get_Question.append(i[0])
+for i in list_sentence: get_Question.append(i[0])
 
 get_Answer = []
-for i in list_sent: get_Answer.append(i[1])
+for i in list_sentence: get_Answer.append(i[1])
     
 labels = []
 for i in range(len(get_Answer)): labels.append(i)
@@ -40,7 +40,7 @@ lbl_encoder = LabelEncoder()
 lbl_encoder.fit(labels)
 labels = lbl_encoder.transform(labels)
 
-vocab_size = 2000
+vocab_size = 1600
 embedding_dim = 16
 max_len = 20
 oov_token = "<OOV>"
@@ -56,13 +56,12 @@ with open('token.pickle', 'wb') as handle:
 with open('label.pickle', 'wb') as ecn_file:
     pickle.dump(lbl_encoder, ecn_file, protocol=pickle.HIGHEST_PROTOCOL)
 
-#Model
 model = Sequential()
 model.add(Embedding(vocab_size, embedding_dim, input_length=max_len))
-model.add(Conv1D(filters=32, kernel_size=3, padding='same', activation='relu'))
+model.add(Conv1D(filters=64, kernel_size=3, padding='same', activation='relu'))
 model.add(LSTM(200))
-model.add(Dense(16, activation='relu'))
-model.add(Dense(16, activation='relu'))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(32, activation='relu'))
 model.add(Dense(num_classes, activation='softmax'))
 
 

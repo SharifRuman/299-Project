@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-lg">
+  <div class="row g-4 justify-content-center align-items-center">
+    <div class="col-md-5 text-center text-md-start">
+      
+        <h6 style="color: red">Are You Lonely, Alone and Depressed?</h6>
+        <p></p><h1 style="color: black; display:inline">Have Fun With <br></h1><h1 style="color: #109146">Our Chatbot</h1></p>
+      
+      <p class="lead my-4 text-muted" style="color: White">This Chatbot is Trained With a LSTM Model.</p>
+      <a href="{{ url_for('main.chatbot') }}" class="btn btn-secondary btn-lg" style="background-color: #109146;" >Get Started</a>
+    </div>
+    <div class="col-md-5 text-center d-none d-md-block">
+      <img src="/static/Chatbot1.png" class="img-fluid" alt="eSchool">
+    </div>
+  </div>
+</div>
+{% endblock %}
