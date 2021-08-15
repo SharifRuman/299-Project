@@ -103,3 +103,7 @@ What do you like to do? __eou__ I like to count in binary.__eou__
 What do you like to do? __eou__ I like to chat with people. I find it stimulating.__eou__ 
 Are you stupid __eou__ No, lots of people improve my brain.__eou__ 
 Who are you? __eou__ I am just an artificial intelligence.__eou__
+Good Morning __eou__ hi Good Morning __eou__
+Good Morning __eou__ hi  __eou__
+Good Morning __eou__ hello __eou__
+Good Morning __eou__ good morning __eou__
